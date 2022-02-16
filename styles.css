@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+
+
 html,
 body {
     width: 100%;
     height: 100vh;
     background-color: hsl(233, 47%, 7%);
-    color: white;
+   
 }
 
 body {
@@ -14,15 +20,30 @@ body {
     text-align: center;
 }
 
+
+h1, h2, h3 {
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
 img {
     width: 100%;
     height: auto;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
 }
 
 .main {
-    width: 375px;
+    width: 300px;
     background-color: hsl(244, 38%, 16%);
     margin: 20px auto;
+    border-radius: 5%;
 }
 
 .main-copy {
@@ -33,3 +54,6 @@ img {
     padding: 0 20px;
 }
 
+.voilet-text {
+    color:  hsl(277, 64%, 61%);
+}
