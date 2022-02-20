@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
 
@@ -9,19 +8,19 @@ body {
     width: 100%;
     height: 100vh;
     background-color: hsl(233, 47%, 7%);
-   
 }
 
 body {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
 
-h1, h2, h3 {
+
+
+h1,
+h2,
+h3 {
     font-family: 'Inter', sans-serif;
     color: white;
 }
@@ -35,25 +34,104 @@ p {
 img {
     width: 100%;
     height: auto;
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    filter: grayscale(100%) brightness(40%) sepia(100%) saturate(600%) hue-rotate(242deg) contrast(70%);
 }
 
 .main {
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 800px;
     background-color: hsl(244, 38%, 16%);
     margin: 20px auto;
-    border-radius: 5%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .main-copy {
     display: flex;
+    width: 100%;
+    box-sizing: border-box;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
+    text-align: center;
+    padding: 0 32px;
+    margin: 0px auto;
 }
 
+
+.main-copy>p {
+    padding: 0 10px;
+    line-height: 24px;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-top: -5px;
+
+}
+
+
 .voilet-text {
-    color:  hsl(277, 64%, 61%);
+    color: hsl(277, 64%, 61%);
+}
+
+.stats-container {
+    width: 100%;
+    text-align: center;
+}
+
+.stats-headings {
+    margin-top: -10px;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 80%;
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 992px) {
+
+    .main-copy>p {
+        padding: 0 0;
+    }
+    
+    .main {
+        flex-direction: row-reverse;
+        width: 1200px;
+        min-width: 1200px;
+        height: 550px;
+        border-top-left-radius: 8px;
+
+    }
+
+    .img-container {
+        display: flex;
+        width: 600px;
+    }
+
+    img {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-top-left-radius: 0px;
+    }
+
+    .main-copy {
+        width: 600px;
+        justify-content: center;
+        text-align: left;
+        padding: 100px;
+
+    }
+
+    .stats-container {
+        display: flex;
+        width: 85%;
+        align-items: baseline;
+        justify-content: space-between;
+        text-align: inherit;
+        
+        
+    }
+
+
+
 }
